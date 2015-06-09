@@ -3,32 +3,55 @@
 
 % section what_is_solid_ (end)
 
-\section{S} % (fold)
+\section{S - Single Responsibility Principle } % (fold)
 \label{sec:s}
 
+\begin{frame}
+	\say{\textit{Every class should have responsibility over a single part of the functionality
+  provided by the software, and that responsibility should be entirely encapsulated by the
+  class.}}, \\DeMarco, Tom
+\end{frame}
+
+\begin{frame}
+  \begin{figure}[p]
+        \centering
+        \includegraphics[width=0.8\textwidth]{doxyparse_pattern.png}
+        \label{fig:Pattern}
+    \end{figure}
+\end{frame}
+
+\begin{frame}
+  \begin{figure}[p]
+        \centering
+        \includegraphics[width=0.8\textwidth]{clang_antipattern.png}
+        \label{fig:antiPattern}
+    \end{figure}
+\end{frame}
+
 % section s (end)
+
 
 \section{O - Open/closed principle} % (fold)
 \label{sec:o}
 
 \begin{frame}
-	\say{\textit{Software entities should be open for extension, but closed for modification.}}, \\Meyer, Bertrand 
+	\say{\textit{Software entities should be open for extension, but closed for modification.}}, \\Meyer, Bertrand
 \end{frame}
 
 \begin{frame}
-	
+
 
 \begin{Parallel}[v]{5cm}{5cm}
     \ParallelLText%
     {
     	\textbf{Bertrand Meyer, 1988}
-    			
+
     	The idea was that once completed, the implementation of a class could only be modified to correct errors.
     }
     \ParallelRText%
     {
     	\textbf{1990s}
-    	
+
     	The implementations can be changed and multiple implementations could be created and polymorphically substituted for each other.
 	}
 \end{Parallel}
@@ -51,19 +74,19 @@
 \label{sec:d}
 
 \begin{frame}
-    \say{\textit{Depend upon Abstractions. Do not depend upon concretions.}}, \\Martin, Robert C. 
+    \say{\textit{Depend upon Abstractions. Do not depend upon concretions.}}, \\Martin, Robert C.
 \end{frame}
 
 \begin{Parallel}[v]{5cm}{5cm}
     \textbf{Principles:}
     \ParallelLText%
     {
-                
+
         High-level modules should not depend on low-level modules. Both should depend on abstractions.
     }
     \ParallelRText%
     {
-        
+
         Abstractions should not depend on details. Details should depend on abstractions.
     }
 \end{Parallel}  
