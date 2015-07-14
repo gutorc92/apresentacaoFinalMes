@@ -1,171 +1,66 @@
-\section{What is SOLID?} % (fold)
-\label{sec:what_is_solid_}
-
-% section what_is_solid_ (end)
-
-\section{S - Single Responsibility Principle } % (fold)
-\label{sec:s}
+\section{Why change?} % (fold)
+\label{sec:why_change_}
 
 \begin{frame}
-	\say{\textit{Every class should have responsibility over a single part of the functionality
-  provided by the software, and that responsibility should be entirely encapsulated by the
-  class.}}, \\DeMarco, Tom
-\end{frame}
-
-\begin{frame}
-  \begin{figure}[p]
-        \centering
-        \includegraphics[width=0.8\textwidth]{doxyparse_pattern.png}
-        \label{fig:Pattern}
-    \end{figure}
-\end{frame}
-
-\begin{frame}
-  \begin{figure}[p]
-        \centering
-        \includegraphics[width=0.8\textwidth]{clang_antipattern.png}
-        \label{fig:antiPattern}
-    \end{figure}
-\end{frame}
-
-% section s (end)
-
-
-\section{O - Open/closed principle} % (fold)
-\label{sec:o}
-
-\begin{frame}
-	\say{\textit{Software entities should be open for extension, but closed for modification.}}, \\Meyer, Bertrand
-\end{frame}
-
-\begin{frame}
-
-
 \begin{Parallel}[v]{5cm}{5cm}
     \ParallelLText%
     {
-    	\textbf{Bertrand Meyer, 1988}
 
-    	The idea was that once completed, the implementation of a class could only be modified to correct errors.
+        Clang  13 July of 2015
     }
     \ParallelRText%
     {
-    	\textbf{1990s}
-
-    	The implementations can be changed and multiple implementations could be created and polymorphically substituted for each other.
+        DoxyParse 18 January of 2013
 	}
 \end{Parallel}
-
 \end{frame}
 
 \begin{frame}
-
-\begin{figure}[h!]
-  % \caption{The Extractor inherited.}
-  \centering
-    \includegraphics[width=0.5\textwidth]{conteudo/Extractor}
-    \caption{Extractor inherited}
-\end{figure}
-    
-\end{frame}
-% subsection use_in_analizo (end)
-
-
-% section o (end)
-
-\section{L - Liskov Substitution Principle} % (fold)
-\label{sec:l}
-\begin{frame}
-    \say {\textit{If for each object o1 of type S there is an object o2 of type T such that for all programs P defined in terms of T, the behavior of P is unchanged when o1 is substituted for o2 then S is a subtype of T.}},\\Liskov, Barbara; (1988)
+   \begin{itemize} 
+        \item DoxyGen is a software for documentation
+        \item DoxyGen is way ahead of doxyparse
+        \item DoxyParse has a few number of maintainers
+    \end{itemize} 
 \end{frame}
 
 \begin{frame}
-
-\begin{figure}[h!]
-  % \caption{The Extractor inherited.}
-  \centering
-    \includegraphics[width=1\textwidth]{conteudo/LSP}
-\end{figure}
-    
+   \begin{itemize} 
+        \item Clang is a huge compiler  
+        \item Clang is constantly updated
+        \item Clang has perl bindings
+        \item Clang is suported by important companies
+    \end{itemize}
 \end{frame}
 
+% section why_change (end)
 
-% section l (end)
-
-\section{I - Interface segregation principle} % (fold)
-\label{sec:i}
-\begin{frame}
-	\say {\textit{Client should not be forced to depend on methods it does not use}},\\Martin, Robert(2002)
-\end{frame}
-\begin{frame}
-\begin{figure}
-        \centering
-        \begin{minipage}{.5\textwidth}
-            \centering
-            \includegraphics[width=.4\linewidth]{ipossivelerro2.png}
-            \caption{Model was a abstraction class}
-        \end{minipage}%
-        \begin{minipage}{.5\textwidth}
-            \centering
-            \includegraphics[width=.4\linewidth]{improvement2.png}
-            \caption{Possible application of ISP}
-        \end{minipage}
-    \end{figure}
-\end{frame}
-% section i (end)
-
-\section{D - Dependency Inversion Principle} % (fold)
-\label{sec:d}
+\section{How it works} % (fold)
+\label{sec:how_it_works}
 
 \begin{frame}
-    \say{\textit{Depend upon Abstractions. Do not depend upon concretions.}}, \\Martin, Robert C.
 \end{frame}
 
+\section{P5-Clang} % (fold)
+\label{sec:p5_clang}
+
 \begin{frame}
-    
-\begin{Parallel}[v]{5cm}{5cm}
-    \textbf{Principles:}
-    \ParallelLText%
-    {
-
-        High-level modules should not depend on low-level modules. Both should depend on abstractions.
-    }
-    \ParallelRText%
-    {
-
-        Abstractions should not depend on details. Details should depend on abstractions.
-    }
-\end{Parallel}  
-
-\end{frame}
-\begin{frame}
-
-\begin{figure}[!htb]
-    \centering
-    \includegraphics[scale=0.5]{SOLID-D}
-    \caption{Analizo - Dependency Inversion Principle}
-\end{figure}
+    \begin{itemize} 
+        \item Final line of functios and classes  
+        \item Access Specifier
+        \item Virtual or pure Virtual method
+        \item Number of arguments
+        \item Unified symbol resolution (USR)
+    \end{itemize}
 \end{frame}
 
-% section d (end)
-\section{SOLID for our code} % (fold)
-\label{sec:our_code}
+\section{Analizo} % (fold)
+\label{sec:analizo}
 
 \begin{frame}
-
-Using SOLID for points of improvement in our code, wih priority to:
-\begin{itemize} 
-\setlength{\leftmargini}{2.5em}
-\item     Single-responsiblity principle
-\item     Open-closed principle 
-\item     Dependency Inversion Principle
-\end{itemize}
-\end{frame}
-
-\begin{frame}
-\begin{figure}[!htb]
-\centering
-\includegraphics[scale=0.5]{SOLID_ANALIZO}
-\caption{Analizo - Refactoring Clang Extractor}
-\end{figure}
+    \begin{itemize} 
+        \item Clang as default extractor
+        \item Call between functions   
+        \item Functional tests
+        \item Fix tests
+    \end{itemize}
 \end{frame}
